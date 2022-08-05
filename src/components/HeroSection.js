@@ -7,9 +7,8 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video autoPlay loop muted >
-        <source src="/capstone_images/background.mp4" type='video/mp4' />
+        <source src={require("../capstone_images/background.mp4")} type='video/mp4' />
         </video>
-        <br></br>
       <h1>PASS</h1>
       <p>PASS</p>
       <div className='hero-btns'>
