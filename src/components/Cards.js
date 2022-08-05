@@ -10,19 +10,19 @@ export default function Cards() {
             <div className="cards__wrapper">
                 <ul className="cards__items">
                 <CardItem 
-                src={require('../capstone_images/pet_image2.webp')}
-                text='Lorem Ipsum'
+                src={require('../capstone_images/pets_9.jpeg')}
+                text='Pet Services'
                 path='/services'
                 />
                 <CardItem 
-                src={require('../capstone_images/pet_image2.webp')}
-                text='Lorem Ipsum'
-                path='/services'
+                src={require('../capstone_images/strays.webp')}
+                text='Lost & Found'
+                path='/lostandFound'
                 />
                 <CardItem 
-                src={require('../capstone_images/pet_image2.webp')}
-                text='Lorem Ipsum'
-                path='/services'
+                src={require('../capstone_images/pets_6.webp')}
+                text='Adopt'
+                path='/adopt'
                 />
                 </ul>
             </div>
