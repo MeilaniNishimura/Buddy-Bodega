@@ -7,6 +7,7 @@ import Services from './components/pages/Services';
 import LostandFound from './components/pages/LostandFound';
 import Adopt from './components/pages/Adopt'
 import SignUp from './components/pages/Signup'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/adopt' element={<Adopt />}/>
         <Route path='/signup' element={<SignUp />}/>
       </Routes>
+      <Footer />
     </Router>
   </>
   );

@@ -7,7 +7,8 @@
 
 .home,
 .services,
-.products,
+.lostandFound,
+.adopt,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -17,7 +18,7 @@
 }
 
 .services {
-  background-image: url('./capstone_images/pet_image.webp');
+  background-image: url('./capstone_images/services.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,8 +26,8 @@
   font-size: 100px;
 }
 
-.products {
-  background-image: url('./capstone_images/pets_3.jpeg');
+.lostandFound {
+  background-image: url('./capstone_images/pets_7.jpeg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -34,8 +35,17 @@
   font-size: 100px;
 }
 
+.adopt {
+  background-image: url('./capstone_images/puppies.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
 .sign-up {
-  background-image: url('./capstone_images/pets_4.jpeg');
+  background-image: url('./capstone_images/pet_image2.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
