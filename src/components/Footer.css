@@ -162,3 +162,7 @@
         flex-direction: column;
     }
 }
+
+i {
+    color: #fff;
+}

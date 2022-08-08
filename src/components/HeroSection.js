@@ -9,18 +9,9 @@ function HeroSection() {
       <video autoPlay loop muted >
         <source src={require("../capstone_images/background.mp4")} type='video/mp4' />
         </video>
-      <h1>PASS</h1>
-      <p>PASS</p>
-      <div className='hero-btns'>
-        <Button className='btns' buttonStyle='btn--outline'
-        buttonSize='btn--large'>
-            PASS
-        </Button>
-        <Button className='btns' buttonStyle='btn--primary'
-        buttonSize='btn--large'>
-            PASS2 
-        </Button>
-      </div>
+      <h1>ABOUT US</h1>
+      <p className='description'>Our mission is to provide a space for local pet owners to thrive. Help us reunite pet owners with their lost buddies through our lost and found section,
+        and provide the best quality of life for their pets through our pet service locators. Search for animals in need of loving homes via our adopt page.</p>
     </div>
   )
 }
