@@ -1,0 +1,54 @@
+.lostCard{
+    display:flex;
+    flex-direction:column;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.lostCard{
+    background-color: white;
+    width:400px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    
+}
+
+.card-image{
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.lostCard > p {
+    padding-left:15px;
+    padding-bottom: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.lostCard > h3 {
+    padding-bottom: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+    font-size: 25px;
+}
+.lostCard > h1{
+    font-size: 40px;
+
+}
+
+.lostCard:hover{
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    
+}
+

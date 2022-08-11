@@ -8,6 +8,7 @@ import LostandFound from './components/pages/LostandFound';
 import Adopt from './components/pages/Adopt'
 import SignUp from './components/pages/Signup'
 import Footer from './components/Footer';
+import firebase from './firebase'
 
 
 function App() {
