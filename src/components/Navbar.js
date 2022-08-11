@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthProvider'
 
 
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true)
+    const [button, setButton] = useState(true);
+    const { login } = useContext(AuthContext)
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -59,14 +62,16 @@ function Navbar() {
                             </Link>
                             </li>
                             <li className='nav-item'>
-                            <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>
-                                Sign Up
+                            <Link to='/signup' className='nav-links-mobile' onClick={login}>
+                                Login
                             </Link>
                             </li>
+              
 
                     </ul>
                     
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                    {button && <Button buttonStyle='btn--outline' onClick={login}>Login</Button>}
+
                     
                 </div>
             </nav>
