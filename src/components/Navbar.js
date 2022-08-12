@@ -4,12 +4,13 @@ import './Navbar.css';
 import { Button } from './Button';
 import { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthProvider'
+import userEvent from '@testing-library/user-event';
 
 
 function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-    const { login } = useContext(AuthContext)
+    const { login, logout, user } = useContext(AuthContext)
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -61,17 +62,53 @@ function Navbar() {
                                 Adopt
                             </Link>
                             </li>
+
+                            {
+                                (user.loggedIn) ?
+                                <li className='nav-item'>
+                            <Link to='/signup' className='nav-links-mobile' onClick={logout}>
+                                Logout
+                            </Link>
+                            </li>
+                            :
                             <li className='nav-item'>
                             <Link to='/signup' className='nav-links-mobile' onClick={login}>
                                 Login
                             </Link>
                             </li>
+                            }
+
+
+
+                            {/* <li className='nav-item'>
+                            <Link to='/signup' className='nav-links-mobile' onClick={login}>
+                                Login
+                            </Link>
+                            </li>
+                            // <li className='nav-item'>
+                            // <Link to='/signup' className='nav-links-mobile' onClick={logout}>
+                            //     Logout
+                            // </Link>
+                            // </li> */}
               
 
                     </ul>
-                    
-                    {button && <Button buttonStyle='btn--outline' onClick={login}>Login</Button>}
 
+   {
+                                (user.loggedIn) ?
+                                <div className='navbar'>
+                                {button && <Button buttonStyle='btn--outline' onClick={logout}>Logout</Button>}
+                                </div>
+                            : <div className='navbar'>
+                            {button && <Button buttonStyle='btn--outline' onClick={login}>Login</Button>}
+                            </div>
+                            }
+
+
+
+                    
+                    {/* {button && <Button buttonStyle='btn--outline' onClick={login}>Login</Button>}
+                    {button && <Button buttonStyle='btn--outline' onClick={logout}>Logout</Button>}  */}
                     
                 </div>
             </nav>

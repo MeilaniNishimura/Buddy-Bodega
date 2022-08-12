@@ -4,9 +4,20 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, browserLocalPersistence, 
 export const AuthContext = createContext()
 
 export const AuthProvider = (props) => {
+    const [user, setUser] = useState({ loggedIn: false})
 
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
+
+    const logout = () => {
+        signOut(auth)
+        .then(() => {
+            console.log('User signed out successfully')
+        })
+        .catch((err) => {
+            console.error(err)
+        })
+    }
 
     const login = () => {
         setPersistence( auth, browserLocalPersistence)
@@ -28,9 +39,27 @@ export const AuthProvider = (props) => {
             })
             .catch((err) => console.error(err))
     };
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser({
+                    username:user.displayName,
+                    email:user.email,
+                    id: user.uid,
+                    loggedIn: true
+                })
+            } else {
+                setUser({ logedIn: false })
+            }
+        })
+
+    }, [])
     
     const values = {
-        login
+        login,
+        logout,
+        user
     }
     
     return (
