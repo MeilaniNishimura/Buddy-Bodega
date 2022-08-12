@@ -12,6 +12,7 @@ export default function Adopt() {
     <h1>ADOPT</h1>
     <p> Browse this page to find animals up for adoption. If you have a furry friend you would like to feature on this page, submit the form below and help them find their fur-ever home.</p>
       </div>
+      <h1 className='adoptTitle'>ADOPT</h1>
        <AdoptPost post={adoptPosts[0]} /> 
        <AdoptPost post={adoptPosts[1]} />
        <AdoptPost post={adoptPosts[2]} />
